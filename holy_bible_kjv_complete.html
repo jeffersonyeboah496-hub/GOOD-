@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Holy Bible KJV — Your Daily Word</title>
+<style>
+:root{--bg:#fffdf8;--sf:#fff;--tx:#2a2418;--mu:#6f6350;--gd:#8a6414;--gb:#c9972f;--gl:#f6ecd0;--ln:#eadfc4;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--fs:20px;--lh:1.7}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#16130c;--sf:#1f1b12;--tx:#f1e9d6;--mu:#b5a98f;--gd:#e0b653;--gl:#33290f;--ln:#3a3220}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#16130c;--sf:#1f1b12;--tx:#f1e9d6;--mu:#b5a98f;--gd:#e0b653;--gl:#33290f;--ln:#3a3220}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--tx);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;padding-bottom:84px}
+h1,h2,h3,.serif{font-family:Georgia,"Iowan Old Style",serif;font-weight:600;margin:0}
+h1{font-size:28px}h2{font-size:21px;margin:22px 0 10px}h3{font-size:17px}
+main{max-width:640px;margin:0 auto;padding:18px 16px}
+.card{background:var(--sf);border:1px solid var(--ln);border-radius:14px;padding:16px;margin:12px 0}
+.hero{background:linear-gradient(160deg,#f6ecd0,#e9c970);color:#2a2418;border:0}
+.hero .ref{font-weight:600}
+.mu{color:var(--mu);font-size:14px}.tag{display:inline-block;font-size:12px;border:1px solid var(--ln);border-radius:20px;padding:1px 9px;color:var(--mu)}
+button,.btn{font:inherit;border:1px solid var(--gb);background:transparent;color:var(--gd);border-radius:10px;padding:9px 14px;min-height:44px;cursor:pointer}
+button.p{background:var(--gb);color:#241a05;border-color:var(--gb);font-weight:600}
+button.sm{min-height:36px;padding:5px 11px;font-size:14px}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--gd);outline-offset:2px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.sp{justify-content:space-between}
+input,select,textarea{font:inherit;width:100%;padding:10px 12px;border:1px solid var(--ln);border-radius:10px;background:var(--sf);color:var(--tx);margin:4px 0}
+label{font-size:14px;color:var(--mu)}
+nav{position:fixed;left:0;right:0;bottom:0;background:var(--sf);border-top:1px solid var(--ln);display:flex;padding-bottom:env(safe-area-inset-bottom,0px);z-index:5}
+nav button{flex:1;border:0;border-radius:0;color:var(--mu);font-size:12px;padding:8px 2px;line-height:1.2}
+nav button b{display:block;font-size:20px;font-weight:400}
+nav button[aria-current=page]{color:var(--gd);font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(58px,1fr));gap:8px}
+.grid button{padding:8px 0}
+.vs{font-family:Georgia,"Iowan Old Style",serif;font-size:var(--fs);line-height:var(--lh);max-width:60ch}
+.v{padding:2px 4px;border-radius:6px;cursor:pointer;display:inline}
+.v sup{font:600 .55em system-ui;color:var(--gd);margin-right:3px}
+.v.sel{outline:2px solid var(--gb)}.v:focus-visible{outline:3px solid var(--gd)}
+.h1{background:#fbe88a;color:#2a2418}.h2{background:#bfe8c0;color:#2a2418}.h3{background:#bcdcf5;color:#2a2418}.h4{background:#f6c4d8;color:#2a2418}
+.dot{width:32px;height:32px;border-radius:50%;padding:0;min-height:32px;border:2px solid var(--ln)}
+.bar{position:sticky;bottom:70px;background:var(--sf);border:1px solid var(--gb);border-radius:14px;padding:10px;margin-top:14px}
+.pb{height:8px;background:var(--ln);border-radius:8px;overflow:hidden}.pb i{display:block;height:100%;background:var(--gb)}
+.day{display:flex;gap:10px;align-items:center;padding:10px 0;border-top:1px solid var(--ln)}
+.toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);background:#2a2418;color:#fff;padding:10px 16px;border-radius:10px;z-index:9;max-width:90%}
+#sp{position:fixed;inset:0;background:linear-gradient(170deg,#fffdf8,#f1deaa);display:grid;place-items:center;text-align:center;z-index:20;transition:opacity .6s;color:#2a2418}
+#sp.off{opacity:0;pointer-events:none}
+.note{border-left:4px solid var(--gb);background:var(--gl);padding:10px 12px;border-radius:0 10px 10px 0;font-size:14px;margin:10px 0}
+.seg button{border-radius:0}.seg button[aria-pressed=true]{background:var(--gb);color:#241a05}
+@media (prefers-reduced-motion:reduce){#sp{transition:none}}
+</style></head><body>
+<div id="sp" role="status"><div>
+<svg width="130" height="110" viewBox="0 0 130 110" aria-hidden="true"><path d="M65 38C50 28 24 28 8 34v62c16-6 42-6 57 4 15-10 41-10 57-4V34c-16-6-42-6-57 4z" fill="#fffdf8" stroke="#8a6414" stroke-width="3"/><path d="M65 38v62" stroke="#8a6414" stroke-width="3"/><path d="M65 4v32M53 14h24" stroke="#c9972f" stroke-width="6" stroke-linecap="round"/></svg>
+<h1 style="margin-top:10px">Holy Bible KJV</h1><p class="serif">King James Version · Your Daily Word</p></div></div>
+<main id="m"></main>
+<nav id="nv" aria-label="Main"></nav>
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let S={};try{S=JSON.parse(localStorage.getItem('hb1'))||{}}catch(e){}
+S=Object.assign({fs:20,lh:1.7,dark:null,pos:null,hl:{},bm:{},nt:{},pr:[],pl:{},qz:{},seen:false},S);
+const save=()=>{try{localStorage.setItem('hb1',JSON.stringify(S))}catch(e){toast('Could not save: browser storage is blocked or full')}};
+function toast(t){const e=document.createElement('div');e.className='toast';e.setAttribute('role','status');e.textContent=t;document.body.appendChild(e);setTimeout(()=>e.remove(),2200)}
+const B="Genesis:50,Exodus:40,Leviticus:27,Numbers:36,Deuteronomy:34,Joshua:24,Judges:21,Ruth:4,1 Samuel:31,2 Samuel:24,1 Kings:22,2 Kings:25,1 Chronicles:29,2 Chronicles:36,Ezra:10,Nehemiah:13,Esther:10,Job:42,Psalms:150,Proverbs:31,Ecclesiastes:12,Song of Solomon:8,Isaiah:66,Jeremiah:52,Lamentations:5,Ezekiel:48,Daniel:12,Hosea:14,Joel:3,Amos:9,Obadiah:1,Jonah:4,Micah:7,Nahum:3,Habakkuk:3,Zephaniah:3,Haggai:2,Zechariah:14,Malachi:4,Matthew:28,Mark:16,Luke:24,John:21,Acts:28,Romans:16,1 Corinthians:16,2 Corinthians:13,Galatians:6,Ephesians:6,Philippians:4,Colossians:4,1 Thessalonians:5,2 Thessalonians:3,1 Timothy:6,2 Timothy:4,Titus:3,Philemon:1,Hebrews:13,James:5,1 Peter:5,2 Peter:3,1 John:5,2 John:1,3 John:1,Jude:1,Revelation:22".split(',').map(x=>{const i=x.lastIndexOf(':');return[x.slice(0,i),+x.slice(i+1)]});
+const bi=n=>B.findIndex(b=>b[0]===n);
+// Complete KJV text is fetched book-by-book from a public-domain dataset.
+// An internet connection is needed the first time a book is opened.
+const OSIS=["Gen","Exod","Lev","Num","Deut","Josh","Judg","Ruth","1Sam","2Sam","1Kgs","2Kgs","1Chr","2Chr","Ezra","Neh","Esth","Job","Ps","Prov","Eccl","Song","Isa","Jer","Lam","Ezek","Dan","Hos","Joel","Amos","Obad","Jonah","Mic","Nah","Hab","Zeph","Hag","Zech","Mal","Matt","Mark","Luke","John","Acts","Rom","1Cor","2Cor","Gal","Eph","Phil","Col","1Thess","2Thess","1Tim","2Tim","Titus","Phlm","Heb","Jas","1Pet","2Pet","1John","2John","3John","Jude","Rev"];
+const loadedBooks=new Set();
+const loadingBooks=new Set();
+async function loadKJVBook(name){
+  if(loadedBooks.has(name)) return true;
+  if(loadingBooks.has(name)) return false;
+  const ix=bi(name); if(ix<0) return false;
+  loadingBooks.add(name);
+  try{
+    const res=await fetch("https://raw.githubusercontent.com/midvash/bible-data/main/versions/en/kjv/books/"+OSIS[ix]+".json");
+    if(!res.ok) throw new Error("Dataset request failed");
+    const data=await res.json();
+    const chapters=data.chapters;
+    const entries=Array.isArray(chapters)?chapters:Object.keys(chapters||{}).sort((a,b)=>+a-(+b)).map(k=>chapters[k]);
+    entries.forEach((chapter,ci)=>{
+      const verses=chapter.verses||{};
+      const out={};
+      if(Array.isArray(verses)) verses.forEach((v,vi)=>{if(v&&v.text)out[+(v.number||v.verse||vi+1)]=v.text;});
+      else Object.keys(verses).forEach(k=>{const v=verses[k];out[+(v.number||v.verse||k)]=typeof v==="string"?v:(v.text||"");});
+      T[name+" "+(ci+1)]=out;
+    });
+    loadedBooks.add(name);
+    return true;
+  }catch(err){
+    toast("Could not load the complete KJV text. Check your internet connection.");
+    return false;
+  }finally{loadingBooks.delete(name);}
+}
+// SAMPLE DATASET: King James Version (public domain). Only these passages are included.
+const T={"Genesis 1":{1:"In the beginning God created the heaven and the earth.",2:"And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.",3:"And God said, Let there be light: and there was light."},
+"Psalms 23":{1:"The LORD is my shepherd; I shall not want.",2:"He maketh me to lie down in green pastures: he leadeth me beside the still waters.",3:"He restoreth my soul: he leadeth me in the paths of righteousness for his name's sake.",4:"Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me.",5:"Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth over.",6:"Surely goodness and mercy shall follow me all the days of my life: and I will dwell in the house of the LORD for ever."},
+"Proverbs 3":{5:"Trust in the LORD with all thine heart; and lean not unto thine own understanding.",6:"In all thy ways acknowledge him, and he shall direct thy paths."},
+"Isaiah 41":{10:"Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness."},
+"Matthew 11":{28:"Come unto me, all ye that labour and are heavy laden, and I will give you rest."},
+"John 3":{16:"For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life."},
+"Romans 8":{28:"And we know that all things work together for good to them that love God, to them who are the called according to his purpose."},
+"Ephesians 4":{32:"And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ's sake hath forgiven you."},
+"Philippians 4":{6:"Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God.",7:"And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.",13:"I can do all things through Christ which strengtheneth me."}};
+// Reflections are written by Claude (AI), not Scripture.
+const D=[["John",3,16,"Love here is shown as action: God gives. Consider one thing you can give today without expecting return."],["Psalms",23,1,"A shepherd supplies what the flock needs. Name one need you can hand over today."],["Proverbs",3,5,"Trust doesn't mean you stop thinking; it means you don't make your own understanding the final authority."],["Romans",8,28,"The promise is about God's purpose working through events, not that every event is good in itself."],["Philippians",4,6,"Prayer with thanksgiving replaces worry with a specific, spoken request."],["Isaiah",41,10,"Each phrase answers a fear: presence, strength, help, support. Which one do you need most today?"],["Matthew",11,28,"The invitation is to the tired. Rest is offered before any task is given."],["Philippians",4,13,"Read in its context, this is about contentment in every circumstance, not about winning."],["Ephesians",4,32,"Forgiveness is modeled on being forgiven. Who might you release today?"],["Genesis",1,1,"Scripture opens with God as the source of everything, which frames every other verse."]];
+const Q=[["Beginner","Who was swallowed by a great fish?",["Jonah","Elijah","Peter","Daniel"],0,"Jonah 1:17"],["Beginner","Who was thrown into the den of lions?",["Joshua","Daniel","Samson","Moses"],1,"Daniel 6:16"],["Beginner","How many books are in the Protestant New Testament?",["24","39","27","66"],2,"Matthew–Revelation"],["Intermediate","In the parable of the lost son, who ran to meet him?",["His brother","A servant","The elders","His father"],3,"Luke 15:20"],["Intermediate","Which book comes right after Psalms?",["Proverbs","Job","Ecclesiastes","Isaiah"],0,"Psalms 150 → Proverbs 1"],["Advanced","Who led Israel across the Jordan River into Canaan?",["Moses","Aaron","Joshua","Caleb"],2,"Joshua 3"]];
+const chs=[];B.forEach(([n,k],i)=>{for(let c=1;c<=k;c++)chs.push([i,c])});
+const chunk=(l,d)=>{const o=[],p=l.length/d;for(let i=0;i<d;i++)o.push(l.slice(Math.round(i*p),Math.round((i+1)*p)));return o};
+const pc=s=>{const i=s.lastIndexOf(' ');return[bi(s.slice(0,i)),+s.slice(i+1)]};
+const fmt=g=>{const a=g[0],z=g[g.length-1];return B[a[0]][0]+' '+a[1]+(g.length>1?(a[0]==z[0]?'–'+z[1]:' – '+B[z[0]][0]+' '+z[1]):'')};
+const L=s=>s.split('|').map(x=>[pc(x)]);
+const PL=[{id:'y',n:'Bible in one year',days:chunk(chs,365)},{id:'nt',n:'New Testament in 90 days',days:chunk(chs.filter(x=>x[0]>=39),90)},
+{id:'f',n:'Seven days of faith',days:L('Hebrews 11|Romans 10|Matthew 17|Mark 9|James 2|Galatians 2|Ephesians 2')},
+{id:'fg',n:'Seven days of forgiveness',days:L('Matthew 6|Matthew 18|Luke 15|Luke 23|Ephesians 4|Colossians 3|Psalms 51')},
+{id:'p',n:'Fourteen days of prayer',days:L('Matthew 6|Luke 11|Luke 18|Psalms 5|Psalms 32|Psalms 63|Philippians 4|1 Thessalonians 5|James 5|1 John 5|Daniel 6|Nehemiah 1|1 Samuel 1|Psalms 143')},
+{id:'g',n:'Thirty days of spiritual growth',days:L('Psalms 1|Proverbs 2|Proverbs 3|Isaiah 40|Matthew 5|Matthew 6|Matthew 7|John 15|Romans 8|Romans 12|1 Corinthians 13|2 Corinthians 5|Galatians 5|Ephesians 4|Ephesians 6|Philippians 2|Philippians 3|Colossians 3|1 Thessalonians 5|2 Timothy 3|Hebrews 12|James 1|James 3|1 Peter 1|2 Peter 1|1 John 3|1 John 4|Psalms 91|Psalms 103|Joshua 1')}];
+let tab='home',rd=S.pos,bk=null,sel=new Set(),dd=0,dv='menu',pid=null,q='',qi=0,qs=0,qa=null,pf='All',pq='',pe=null,ts='OT';
+const NAV=[['home','⌂','Home'],['bible','✝','Bible'],['disc','✦','Discover'],['pray','♡','Prayer'],['prof','☺','Profile']];
+const key=(b,c,v)=>b+' '+c+':'+v;
+const cite=(b,c,v)=>b+' '+c+':'+v+' (KJV)';
+function theme(){const r=document.documentElement;S.dark===null?r.removeAttribute('data-theme'):r.setAttribute('data-theme',S.dark?'dark':'light');r.style.setProperty('--fs',S.fs+'px');r.style.setProperty('--lh',S.lh)}
+function go(t){tab=t;if(t=='disc')dv='menu';render();scrollTo(0,0)}
+function open(b,c,v){rd={b,c};S.pos=rd;save();sel=new Set(v?[v]:[]);tab='bible';bk=null;render();if(!loadedBooks.has(b)){loadKJVBook(b).then(ok=>{if(ok&&tab==='bible'&&rd&&rd.b===b){render();if(v)setTimeout(()=>{const e=document.getElementById('v'+v);e&&e.scrollIntoView({block:'center'})},50)}})}else if(v)setTimeout(()=>{const e=document.getElementById('v'+v);e&&e.scrollIntoView({block:'center'})},50)}
+function vtxt(b,c,v){return(T[b+' '+c]||{})[v]||''}
+function share(txt){if(navigator.share)navigator.share({text:txt}).catch(()=>{});else cp(txt)}
+function cp(txt){(navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(()=>toast('Copied'),()=>toast('Copy blocked by this browser'))}
+const dayN=d=>Math.floor(d/864e5);
+function dailyV(){const d=new Date(Date.now()+dd*864e5);return{d,v:D[(dayN(d.getTime())%D.length+D.length)%D.length]}}
+function verseCard(b,c,v,ex){const t=vtxt(b,c,v),k=key(b,c,v);return`<p class="serif" style="font-size:21px;line-height:1.5;margin:0 0 6px">${esc(t)}</p><p class="ref">${b} ${c}:${v} · KJV</p>${ex||''}<div class="row"><button class="sm p" data-a="bm" data-k="${esc(k)}">${S.bm[k]?'Saved ✓':'Save'}</button><button class="sm" data-a="shr" data-b="${b}" data-c="${c}" data-v="${v}">Share</button><button class="sm" data-a="open" data-b="${b}" data-c="${c}" data-v="${v}">Read in context</button></div>`}
+function home(){const{d,v}=dailyV(),[b,c,vn]=v,h=new Date().getHours();
+return`<h1>${h<12?'Good morning':h<18?'Good afternoon':'Good evening'}</h1><p class="mu">Welcome to Your Daily Word.</p>
+<div class="card hero"><div class="row sp"><b>Daily verse</b><span>${d.toLocaleDateString(undefined,{month:'short',day:'numeric'})}</span></div>${verseCard(b,c,vn,`<div class="note" style="background:rgba(255,255,255,.55);color:#2a2418"><b>Reflection (AI-written, not Scripture):</b> ${esc(v[3])}</div>`)}
+<div class="row"><button class="sm" data-a="dd" data-n="-1">‹ Earlier day</button><button class="sm" data-a="dd" data-n="${dd?-dd:0}" ${dd?'':'disabled'}>Today</button><button class="sm" data-a="dd" data-n="1">Next day ›</button></div></div>
+${S.pos?`<div class="card"><b>Continue reading</b><p class="mu">${S.pos.b} ${S.pos.c}</p><button class="p" data-a="open" data-b="${S.pos.b}" data-c="${S.pos.c}">Open</button></div>`:`<div class="card"><b>Start reading</b><p class="mu">Pick any book. No account needed.</p><button class="p" data-a="tab" data-t="bible">Open the Bible</button></div>`}
+<div class="note"><b>About the text:</b> the complete public-domain King James Version is loaded book-by-book from an online dataset. An internet connection is needed to load a book for the first time.</div>`}
+function bible(){if(rd)return reader();
+if(bk!==null){const[n,k]=B[bk];return`<button class="sm" data-a="bkx">‹ All books</button><h1 style="margin:12px 0">${n}</h1><div class="grid">${Array.from({length:k},(_,i)=>`<button data-a="open" data-b="${n}" data-c="${i+1}">${i+1}${T[n+' '+(i+1)]?' ●':''}</button>`).join('')}</div><p class="mu">● = sample text included</p>`}
+const list=(a,z)=>B.slice(a,z).map((x,i)=>`<button class="card" style="width:100%;text-align:left;margin:6px 0;color:var(--tx)" data-a="bk" data-i="${a+i}">${x[0]} <span class="mu">· ${x[1]} ch</span></button>`).join('');
+return`<h1>Bible</h1><div class="card"><b>Translation</b><p class="mu">King James Version (KJV) · Public domain</p><span class="tag">Selected version: KJV</span></div><div class="row seg" style="margin:12px 0"><button data-a="ts" data-t="OT" aria-pressed="${ts=='OT'}">Old Testament</button><button data-a="ts" data-t="NT" aria-pressed="${ts=='NT'}">New Testament</button></div>${ts=='OT'?list(0,39):list(39,66)}`}
+function reader(){const{b,c}=rd,t=T[b+' '+c],i=bi(b),idx=chs.findIndex(x=>x[0]==i&&x[1]==c),p=chs[idx-1],n=chs[idx+1];
+const vs=t?Object.keys(t).map(Number).map(v=>{const k=key(b,c,v);return`<span class="v ${S.hl[k]?'h'+S.hl[k]:''} ${sel.has(v)?'sel':''}" id="v${v}" tabindex="0" role="button" aria-pressed="${sel.has(v)}" data-a="sv" data-v="${v}"><sup>${v}</sup>${esc(t[v])}</span> `}).join(''):`<div class="note">Loading the complete King James Version text for ${b} ${c}… If it does not appear, check your internet connection and reopen this chapter.</div>`;
+let bar='';if(sel.size){const ks=[...sel].sort((a,b)=>a-b);bar=`<div class="bar"><b>${ks.length} selected</b><div class="row" style="margin:8px 0">${[1,2,3,4].map(h=>`<button class="dot h${h}" aria-label="Highlight color ${h}" data-a="hl" data-h="${h}"></button>`).join('')}<button class="sm" data-a="hl" data-h="0">Clear</button></div><div class="row"><button class="sm" data-a="bms">Bookmark</button><button class="sm" data-a="nt">Note</button><button class="sm" data-a="cps">Copy</button><button class="sm" data-a="shs">Share</button></div></div>`}
+return`<div class="row sp"><button class="sm" data-a="rx">‹ Books</button><button class="sm" data-a="bk" data-i="${i}">${b} ▾</button></div><h1 style="margin:12px 0">${b} ${c}</h1><div class="vs">${vs}</div><p class="mu">${t?'King James Version (public domain) · complete chapter text':''} · Tap a verse to select it.</p>${bar}
+<div class="row sp" style="margin-top:14px"><button ${p?`data-a="open" data-b="${p?B[p[0]][0]:''}" data-c="${p?p[1]:''}"`:'disabled'}>‹ Previous</button><button ${n?`data-a="open" data-b="${n?B[n[0]][0]:''}" data-c="${n?n[1]:''}"`:'disabled'}>Next ›</button></div>`}
+function selTxt(){const{b,c}=rd,ks=[...sel].sort((a,b)=>a-b);return'“'+ks.map(v=>vtxt(b,c,v)).join(' ')+'” — '+b+' '+c+':'+(ks.length>1?ks[0]+'–'+ks[ks.length-1]:ks[0])+' (KJV)'}
+function find(s){s=s.trim();if(!s)return[];const m=s.match(/^((?:[1-3] ?)?[a-z][a-z ]*?) (\d+)(?::(\d+))?$/i),o=[];
+if(m){const nm=m[1].toLowerCase(),b=B.find(x=>x[0].toLowerCase()==nm)||B.find(x=>x[0].toLowerCase().startsWith(nm));if(b&&+m[2]<=b[1])return[{b:b[0],c:+m[2],v:m[3]?+m[3]:0,t:m[3]?vtxt(b[0],+m[2],+m[3]):''}]}
+const lq=s.toLowerCase();B.forEach(x=>{if(x[0].toLowerCase().includes(lq))o.push({b:x[0],c:1,v:0,t:'Book · '+x[1]+' chapters'})});
+for(const k in T){const i=k.lastIndexOf(' '),b=k.slice(0,i),c=+k.slice(i+1);for(const v in T[k])if(T[k][v].toLowerCase().includes(lq))o.push({b,c,v:+v,t:T[k][v]})}
+return o}
+function results(){const r=find(q);let h=r.map(x=>`<button class="card" style="width:100%;text-align:left;color:var(--tx)" data-a="open" data-b="${x.b}" data-c="${x.c}" data-v="${x.v}"><b>${x.b} ${x.c}${x.v?':'+x.v:''}</b><div class="serif">${esc(x.t||'(text not in sample dataset)')}</div></button>`).join('');
+const lq=q.trim().toLowerCase();if(lq){for(const k in S.bm)if(k.toLowerCase().includes(lq))h+=`<div class="card"><span class="tag">Bookmark</span> ${esc(k)}</div>`;for(const k in S.nt)if(S.nt[k].toLowerCase().includes(lq)||k.toLowerCase().includes(lq))h+=`<div class="card"><span class="tag">Note</span> <b>${esc(k)}</b><br>${esc(S.nt[k])}</div>`}
+return h||(q.trim()?'<p class="mu">No matches in the sample dataset. Try “John 3:16”, “love” or “Psalms 23”.</p>':'<p class="mu">Search verses (John 3:16), keywords, books, and your notes.</p>')}
+function disc(){if(dv=='menu')return`<h1>Discover</h1><label for="q">Search</label><input id="q" type="search" placeholder="John 3:16, faith, Psalms…" value="${esc(q)}" autocomplete="off"><div id="rs">${results()}</div><h2>Explore</h2><button class="card" style="width:100%;text-align:left;color:var(--tx)" data-a="dv" data-t="plans"><b>Reading plans</b><div class="mu">6 plans with progress tracking</div></button><button class="card" style="width:100%;text-align:left;color:var(--tx)" data-a="dv" data-t="quiz"><b>Bible quiz</b><div class="mu">Multiple choice, with references</div></button>`;
+if(dv=='plans')return`<button class="sm" data-a="dv" data-t="menu">‹ Back</button><h1 style="margin:12px 0">Reading plans</h1>${PL.map(p=>{const s=S.pl[p.id],dn=s?Object.keys(s.d).length:0;return`<button class="card" style="width:100%;text-align:left;color:var(--tx)" data-a="plan" data-id="${p.id}"><b>${p.n}</b><div class="mu">${s?s.st+' · ':''}${dn}/${p.days.length} days</div><div class="pb"><i style="width:${dn/p.days.length*100}%"></i></div></button>`}).join('')}`;
+if(dv=='plan'){const p=PL.find(x=>x.id==pid),s=S.pl[pid],dn=s?Object.keys(s.d).length:0;
+return`<button class="sm" data-a="dv" data-t="plans">‹ Plans</button><h1 style="margin:12px 0">${p.n}</h1><div class="pb"><i style="width:${dn/p.days.length*100}%"></i></div><p class="mu">${dn} of ${p.days.length} days done ${s?'· '+s.st:''}</p><div class="row">${!s?'<button class="p" data-a="ps" data-s="active">Start plan</button>':s.st=='active'?'<button data-a="ps" data-s="paused">Pause</button>':s.st=='paused'?'<button class="p" data-a="ps" data-s="active">Resume</button>':''}${s&&s.st!='done'?'<button data-a="ps" data-s="done">Mark complete</button>':''}</div><div class="note">Reminders need notifications, which aren't connected yet (see Profile → Setup).</div>
+${p.days.slice(0,s?undefined:30).map((g,i)=>`<div class="day"><button class="sm ${s&&s.d[i+1]?'p':''}" aria-label="Day ${i+1} ${s&&s.d[i+1]?'done':'not done'}" data-a="pd" data-n="${i+1}" ${s&&s.st!='done'?'':'disabled'}>${s&&s.d[i+1]?'✓':i+1}</button><div><span class="mu">Day ${i+1}</span><br><a href="#" style="color:var(--gd)" data-a="open" data-b="${B[g[0][0]][0]}" data-c="${g[0][1]}">${fmt(g)}</a></div></div>`).join('')}${!s&&p.days.length>30?`<p class="mu">Start the plan to see all ${p.days.length} days.</p>`:''}`}
+if(dv=='quiz'){if(qi>=Q.length)return`<h1>Quiz complete</h1><div class="card"><p class="serif" style="font-size:28px">${qs} / ${Q.length}</p><p class="mu">Best: ${S.qz.best||0}</p><button class="p" data-a="qr">Play again</button> <button data-a="dv" data-t="menu">Back</button></div>`;
+const x=Q[qi];return`<button class="sm" data-a="dv" data-t="menu">‹ Back</button><p class="mu">Question ${qi+1} of ${Q.length} · ${x[0]}</p><h2 style="margin-top:4px">${x[1]}</h2>${x[2].map((o,i)=>`<button class="card" style="width:100%;text-align:left;color:var(--tx);${qa!==null&&i==x[3]?'border-color:#2f8f4f;border-width:2px':qa==i?'border-color:#b3261e;border-width:2px':''}" data-a="qa" data-i="${i}" ${qa!==null?'disabled':''}>${o}</button>`).join('')}${qa!==null?`<div class="note">${qa==x[3]?'Correct.':'Not quite.'} Reference: <b>${x[4]}</b></div><button class="p" data-a="qn">${qi==Q.length-1?'See score':'Next question'}</button>`:''}`}}
+function pray(){const list=S.pr.filter(p=>(pf=='All'||p.st==pf)&&(!pq||(p.t+p.x+p.r).toLowerCase().includes(pq.toLowerCase())));const e=pe!==null?S.pr.find(p=>p.id==pe):null;
+return`<h1>Prayer journal</h1><p class="mu">Stored only on this device.</p><form class="card" id="pf" novalidate><label for="pt">Title</label><input id="pt" maxlength="80" value="${e?esc(e.t):''}"><label for="pc">Category</label><select id="pc">${['Personal','Family','Health','Thanksgiving','Guidance','Others'].map(c=>`<option ${e&&e.c==c?'selected':''}>${c}</option>`).join('')}</select><label for="px">Prayer request</label><textarea id="px" rows="3" maxlength="1000">${e?esc(e.x):''}</textarea><label for="pr">Reflection (optional)</label><textarea id="pr" rows="2" maxlength="1000">${e?esc(e.r):''}</textarea><div class="row"><button class="p" type="submit">${e?'Save changes':'Add prayer'}</button>${e?'<button type="button" data-a="pcx">Cancel</button>':''}</div></form>
+<div class="row seg">${['All','Ongoing','Answered'].map(f=>`<button class="sm" data-a="pf" data-f="${f}" aria-pressed="${pf==f}">${f}</button>`).join('')}</div><input id="ps" type="search" placeholder="Search prayers" value="${esc(pq)}" aria-label="Search prayers"><div id="pl">${plist(list)}</div>`}
+function plist(l){return l.length?l.map(p=>`<div class="card"><div class="row sp"><b>${esc(p.t)}</b><span class="tag">${p.st}</span></div><div class="mu">${esc(p.c)} · ${new Date(p.d).toLocaleDateString()}</div><p>${esc(p.x)}</p>${p.r?`<p class="mu"><i>Reflection:</i> ${esc(p.r)}</p>`:''}<div class="row"><button class="sm" data-a="pk" data-id="${p.id}">${p.st=='Answered'?'Mark ongoing':'Mark answered'}</button><button class="sm" data-a="pedit" data-id="${p.id}">Edit</button><button class="sm" data-a="pdel" data-id="${p.id}">Delete</button></div></div>`).join(''):'<div class="card mu">No prayers here yet. Write your first request above.</div>'}
+function prof(){const bms=Object.keys(S.bm),nts=Object.keys(S.nt);
+const setup=[['Accounts & cross-device sync','Needs a backend (e.g. Supabase Auth + Postgres with row-level security). Data currently lives only in this browser.'],['Complete Bible text (KJV)','The app loads the complete public-domain KJV by book from an online JSON dataset. An internet connection is needed when loading a book for the first time; this build does not yet bundle the entire text for offline use. Other translations may require a license.'],['Audio Bible','Needs a licensed audio provider or files.'],['Notifications & reminders','Needs a service worker, push service and permission flow.'],['Community','Needs a backend with moderation, reporting and blocking.'],['Admin dashboard','Needs server-side role-based access control. It must not be built in frontend code alone.'],['Offline / installable app','Needs a hosted manifest and service worker.']];
+return`<h1>Profile</h1><p class="mu">Guest mode · no account</p><h2>Reading settings</h2><div class="card"><label for="fs">Text size: ${S.fs}px</label><input id="fs" type="range" min="15" max="32" value="${S.fs}"><label for="lh">Line spacing: ${S.lh}</label><input id="lh" type="range" min="1.3" max="2.2" step="0.1" value="${S.lh}"><label for="dk">Theme</label><select id="dk"><option value="n" ${S.dark===null?'selected':''}>Match device</option><option value="l" ${S.dark===false?'selected':''}>Light</option><option value="d" ${S.dark===true?'selected':''}>Dark</option></select></div>
+<h2>Saved verses (${bms.length})</h2>${bms.length?bms.map(k=>{const m=k.match(/^(.+) (\d+):(\d+)$/);return`<div class="card row sp"><span><b>${esc(k)}</b><br><span class="serif">${esc(vtxt(m[1],m[2],m[3]))}</span></span><span class="row"><button class="sm" data-a="open" data-b="${m[1]}" data-c="${m[2]}" data-v="${m[3]}">Open</button><button class="sm" data-a="bm" data-k="${esc(k)}">Remove</button></span></div>`}).join(''):'<div class="card mu">No bookmarks yet. Select a verse in the reader.</div>'}
+<h2>Notes (${nts.length})</h2>${nts.length?nts.map(k=>{const m=k.match(/^(.+) (\d+):(\d+)$/);return`<div class="card"><b>${esc(k)}</b><p>${esc(S.nt[k])}</p><div class="row"><button class="sm" data-a="open" data-b="${m[1]}" data-c="${m[2]}" data-v="${m[3]}">Open</button><button class="sm" data-a="ned" data-k="${esc(k)}">Edit</button><button class="sm" data-a="ndel" data-k="${esc(k)}">Delete</button></div></div>`}).join(''):'<div class="card mu">No notes yet.</div>'}
+<h2>Your data</h2><div class="row"><button data-a="exp">Copy backup (JSON)</button><button data-a="rst">Erase all data</button></div>
+<h2>Setup needed</h2><p class="mu">These features need external services. They are not faked here.</p>${setup.map(s=>`<div class="note"><b>${s[0]}</b><br>${s[1]}</div>`).join('')}`}
+function render(){$('#nv').innerHTML=NAV.map(n=>`<button data-a="tab" data-t="${n[0]}" ${tab==n[0]?'aria-current="page"':''}><b>${n[1]}</b>${n[2]}</button>`).join('');
+if(tab!='bible')rd=tab=='bible'?rd:rd;$('#m').innerHTML={home,bible,disc,pray,prof}[tab]()}
+document.addEventListener('click',e=>{const t=e.target.closest('[data-a]');if(!t)return;const a=t.dataset.a,d=t.dataset;if(a=='open')e.preventDefault();
+const A={tab:()=>{if(d.t=='bible')rd=null;go(d.t)},open:()=>open(d.b,+d.c,+d.v||0),dd:()=>{dd+=+d.n;render()},bk:()=>{rd=null;bk=+d.i;tab='bible';render()},bkx:()=>{bk=null;render()},rx:()=>{rd=null;render()},ts:()=>{ts=d.t;render()},
+bm:()=>{const k=d.k;S.bm[k]?delete S.bm[k]:S.bm[k]=1;save();render()},shr:()=>share('“'+vtxt(d.b,d.c,d.v)+'” — '+cite(d.b,d.c,d.v)),
+sv:()=>{const v=+d.v;sel.has(v)?sel.delete(v):sel.add(v);render();const el=document.getElementById('v'+v);el&&el.focus({preventScroll:true})},
+hl:()=>{sel.forEach(v=>{const k=key(rd.b,rd.c,v);+d.h?S.hl[k]=+d.h:delete S.hl[k]});save();sel.clear();render()},
+bms:()=>{sel.forEach(v=>S.bm[key(rd.b,rd.c,v)]=1);save();toast('Bookmarked');sel.clear();render()},
+nt:()=>{const v=[...sel][0],k=key(rd.b,rd.c,v),x=prompt('Note for '+k,S.nt[k]||'');if(x!==null){x.trim()?S.nt[k]=x.trim().slice(0,1000):delete S.nt[k];save();toast('Note saved')}},
+ned:()=>{const x=prompt('Edit note for '+d.k,S.nt[d.k]);if(x!==null){x.trim()?S.nt[d.k]=x.trim().slice(0,1000):delete S.nt[d.k];save();render()}},ndel:()=>{if(confirm('Delete this note?')){delete S.nt[d.k];save();render()}},
+cps:()=>cp(selTxt()),shs:()=>share(selTxt()),dv:()=>{dv=d.t;render()},plan:()=>{pid=d.id;dv='plan';render()},
+ps:()=>{const s=S.pl[pid]||(S.pl[pid]={st:'active',d:{}});s.st=d.s;save();render()},pd:()=>{const s=S.pl[pid];s.d[d.n]?delete s.d[d.n]:s.d[d.n]=1;save();render()},
+qa:()=>{qa=+d.i;if(qa==Q[qi][3])qs++;render()},qn:()=>{qi++;qa=null;if(qi>=Q.length){S.qz.best=Math.max(S.qz.best||0,qs);save()}render()},qr:()=>{qi=0;qs=0;qa=null;render()},
+pf:()=>{pf=d.f;render()},pk:()=>{const p=S.pr.find(x=>x.id==d.id);p.st=p.st=='Answered'?'Ongoing':'Answered';save();render()},pedit:()=>{pe=+d.id;render();scrollTo(0,0)},pcx:()=>{pe=null;render()},pdel:()=>{if(confirm('Delete this prayer?')){S.pr=S.pr.filter(x=>x.id!=d.id);save();render()}},
+exp:()=>cp(JSON.stringify(S)),rst:()=>{if(confirm('Erase everything saved on this device?')){localStorage.removeItem('hb1');location.reload()}}};
+A[a]&&A[a]()});
+document.addEventListener('keydown',e=>{if((e.key=='Enter'||e.key==' ')&&e.target.dataset&&e.target.dataset.a=='sv'){e.preventDefault();e.target.click()}});
+document.addEventListener('input',e=>{const i=e.target.id;
+if(i=='q'){q=e.target.value;$('#rs').innerHTML=results()}
+else if(i=='ps'){pq=e.target.value;$('#pl').innerHTML=plist(S.pr.filter(p=>(pf=='All'||p.st==pf)&&(!pq||(p.t+p.x+p.r).toLowerCase().includes(pq.toLowerCase()))))}
+else if(i=='fs'){S.fs=+e.target.value;theme();save();e.target.previousElementSibling.textContent='Text size: '+S.fs+'px'}
+else if(i=='lh'){S.lh=+e.target.value;theme();save();e.target.previousElementSibling.textContent='Line spacing: '+S.lh}});
+document.addEventListener('change',e=>{if(e.target.id=='dk'){const v=e.target.value;S.dark=v=='n'?null:v=='d';save();theme()}});
+document.addEventListener('submit',e=>{e.preventDefault();if(e.target.id!='pf')return;const t=$('#pt').value.trim(),x=$('#px').value.trim();
+if(!t||!x){toast('Add a title and a prayer request');return}
+const o={t,x,c:$('#pc').value,r:$('#pr').value.trim()};
+if(pe!==null){Object.assign(S.pr.find(p=>p.id==pe),o);pe=null;toast('Prayer updated')}else{S.pr.unshift({id:Date.now(),d:Date.now(),st:'Ongoing',...o});toast('Prayer added')}
+save();render()});
+theme();render();setTimeout(()=>$('#sp').classList.add('off'),1500);setTimeout(()=>$('#sp').remove(),2300);
+</script></body></html>
